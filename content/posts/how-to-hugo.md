@@ -1,5 +1,5 @@
 ---
-title: "Set Up Your Hugo+GitHub Blog In 5 Minutes"
+title: "Set Up Your Hugo + GitHub Blog In 5 Minutes"
 date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
