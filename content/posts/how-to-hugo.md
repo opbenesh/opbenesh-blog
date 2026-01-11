@@ -10,10 +10,15 @@ I literally done this an hour ago, so might as well document my learning for fut
 
 #### **1. Core Prerequisites**
 
-Open a terminal, install `hugo`
-
+Open a terminal, install `hugo`:
 ```bash
 brew install hugo
+```
+
+**Set up your Git identity** (so your commits are actually linked to you):
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
 ```
 
 Also, make sure you have a GitHub account!
