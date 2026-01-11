@@ -61,3 +61,4 @@ And the most surprising thing was that building it was **SO. MUCH. FUN.** The as
 *   One surprising side effect of the async manner is that you can either use your newly free time for non-coding tasks (e.g. making dinner), but
 *   You can also use it for performing *other coding tasks* (hello Jevons paradox!). I ended up spending most of my weekend on this.
 *   Also - you _can_ actually use these things for non-coding tasks. Data analysis and research feels like a natural next step - put all your csvs file in a GitHub repo and let it run.
+*   Also see Simon Willison's ["The year of programming on my phone"](https://simonwillison.net/2025/Dec/31/the-year-in-llms/#the-year-of-programming-on-my-phone) from his excellent 2025 recap.
