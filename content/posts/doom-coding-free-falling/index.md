@@ -6,13 +6,11 @@ tags = ['coding', 'spotify', 'ai', 'claude', 'doom-coding', 'python']
 summary = 'How I built a Spotify release tracker on my phone using Claude Code and vibes.'
 +++
 
-Hosting a weekly "new metal" show at [KZRadio](https://www.kzradio.net/shows/esh) (hello, shameless plug) means I have an ever-renewing deadline for finding new stuff to play, and Spotify's own Release Radar misses 70% of the good stuff. So I built this over the weekend:
+Hosting a weekly "new metal" show at [KZRadio](https://www.kzradio.net/shows/esh) (hello, shameless plug) means I have an ever-renewing deadline for finding new stuff to play, and Spotify's own Release Radar misses 70% of the good stuff. I wanted to revitalize my legacy Spotify release tracker project for a while now, but obviously ain't nobody got time for this sort of things these days.
 
-I wanted to revitalize my legacy Spotify release tracker project for a while now, but obviously ain't nobody got time for this sort of things these days.
+**THAT ALL CHANGED** when I read a Hacker News article titled ["Stop Doom Scrolling, Start Doom Coding"](https://github.com/rberg27/doom-coding) (amazing term!). I'm skipping forward a bit, but turns out that these days, the LLM guys allow you to spin up on-demand sandboxes for their coding services, which you can then use to vibe code **ON YOUR FREAKING PHONE** instead of checking out the latest political takeovers on apnews.
 
-**THAT ALL CHANGED** when I read a Hacker News article titled ["Stop Doom Scrolling, Start Doom Coding"](https://github.com/rberg27/doom-coding) (amazing term!). I'm skipping forward a bit, but turns out that these days, the LLM guys allow you to spin up on-demand sandboxes for their coding services, which you can then use to vibe code **ON YOUR FREAKING PHONE.** 
-
-But if I'm already vibe coding, I might as well auto-approve agent code runs, meaning that I definitely don't want the setup running on my local machine (or even a VM on the same network). So on Friday morning I created an empty GitHub repo, and after a weekend of vibe-Clauding on the go (is this a thing? this should be a thing), I had a fully working app—complete with an AI-generated logo!
+So on Friday morning I created an empty GitHub repo, and after a weekend of vibe-Clauding on the go (is this a thing? this should be a thing), I had a fully working app—complete with an AI-generated logo!
 
 ```bash
 $ esh-tracker track --artist="Turnstile" --since 2025-10-01
@@ -27,9 +25,11 @@ And the most surprising thing was that building it was **SO. MUCH. FUN.** The as
 
 I'm going to write a web version of the tracker one day, but feel free to early-adopt at `pip install esh-tracker` (or just check out the [GitHub repository](https://github.com/opbenesh/esh-tracker)).
 
+And now - content!
+
 ***
 
-## 🧑‍🎓 HOW TO DOOM CODE
+## 🧑‍🎓 DOOM CODE 101
 
 *   Create an empty, private GitHub repo.
 *   Spin up Claude on your phone, go to the Code tab
