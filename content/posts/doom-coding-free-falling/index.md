@@ -53,7 +53,7 @@ And now - content!
 
 {{< figure src="claude-interaction.jpg" caption="A typical Claude Code interaction on mobile—reviewing code changes while waiting for the bus." width="50%" >}}
 
-## 💡 Doom Coding TIL
+## 💡 Pro Tips
 
 *   Optional, but highly recommended: Brainstorm your planned app with your favorite non-coding LLM and ask it to create a spec.
 *   Keep a `CLAUDE.md` file for instructions. Claude reads it before proceeding, so that's a good place to put important stuff about your project, priorities, and environment. Think of it like the "Our Core Values" document you never opened at your previous job!
