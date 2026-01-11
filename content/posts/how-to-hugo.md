@@ -20,14 +20,17 @@ brew install hugo gh
 gh auth login
 ```
 
-#### **2. Initialize the Project**
+#### **2. Initialize and Link**
 
-Create the directory structure and initialize the repository. Replace `my-blog` with a better name.
+Create the directory structure, initialize Git, and **link it to GitHub** immediately:
 
 ```bash
 hugo new site my-blog
 cd my-blog
 git init
+
+# This creates the repo on GitHub and sets it as your 'origin' remote
+gh repo create my-blog --public --source=. --remote=origin
 ```
 
 #### **3. Theme Installation**
@@ -46,17 +49,15 @@ Update `hugo.toml` with your specific details.
 * **baseURL**: `https://[your-github-username].github.io/`
 * **theme**: `PaperMod`
 
-#### **5. Link and Push to GitHub**
+#### **5. Final Push**
 
-Now, use the GitHub CLI to create the remote repository and **link it to your local project** instantly:
+Now that everything is configured, make your first commit and push to GitHub:
 
 ```bash
 git add .
-git commit -m "Initial commit"
+git commit -m "Initial commit: Setup Hugo with PaperMod"
 git branch -M main
-
-# This command creates the repo on GitHub and sets it as your 'origin' remote
-gh repo create my-blog --public --source=. --remote=origin --push
+git push -u origin main
 ```
 
 #### **6. Deployment Automation (GitHub Actions)**
