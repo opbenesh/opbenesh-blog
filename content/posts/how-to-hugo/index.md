@@ -4,6 +4,10 @@ date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
 summary: "I literally did this an hour ago—here is how to set up a Hugo blog with PaperMod and delegate the maintenance to AI agents."
+cover:
+  image: "cover.png"
+  alt: "Hugo setup guide banner"
+  relative: true
 ---
 
 I literally done this an hour ago, so might as well document my learning for future generations!
@@ -22,7 +26,7 @@ gh auth login
 
 #### **2. Initialize and Link**
 
-Create the directory structure, initialize Git, and **link it to GitHub**. 
+Create the directory structure, initialize Git, and **link it to GitHub**.
 
 ```bash
 # replace [github-username] with your GitHub username
@@ -45,7 +49,7 @@ echo 'theme = "PaperMod"' >> hugo.toml
 
 #### **4. Basic Config**
 
-Update `hugo.toml` with your specific details. 
+Update `hugo.toml` with your specific details.
 
 * **baseURL**: `https://[girhub-username].github.io/`
 * **theme**: `PaperMod`
