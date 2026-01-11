@@ -1,25 +1,26 @@
 ---
-title: "Hugo Blog Setup & Agentic Automation"
+title: "Set Up Your Hugo+GitHub Blog In 5 Minutes"
 date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
-summary: "A guide to setting up a Hugo blog with PaperMod and automating it with AI agents."
+summary: "A guide to setting up a Hugo blog and automating it with AI agents."
 ---
 
-### **Hugo Blog Setup & Agentic Automation**
+I literally done this an hour ago, so might as well document my learning for future generations!
 
 #### **1. Core Prerequisites**
 
-Ensure you have Hugo and Git installed on your Mac.
+Open a terminal, install `hugo`
 
 ```bash
 brew install hugo
-git --version
 ```
+
+Also, make sure you have a GitHub account!
 
 #### **2. Initialize the Project**
 
-Create the directory structure and initialize the repository.
+Create the directory structure and initialize the repository. Replace `my-blog` with a better name.
 
 ```bash
 hugo new site my-blog
@@ -29,55 +30,45 @@ git init
 
 #### **3. Theme Installation**
 
-Clone the PaperMod theme directly into the `themes` directory.
+Pick a hugo theme - I use PaperMode:
 
 ```bash
 git clone --depth=1 https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
 echo 'theme = "PaperMod"' >> hugo.toml
 ```
 
-#### **4. Configuration**
+#### **4. Basic Config**
 
 Update `hugo.toml` with your specific details.
 
-* **baseURL**: `https://[your-username].github.io/`
+* **baseURL**: `https://[your-github-username].github.io/`
 * **theme**: `PaperMod`
 
 #### **5. Deployment Automation (GitHub Actions)**
 
 1. `mkdir -p .github/workflows`
 2. `touch .github/workflows/hugo.yaml`
-3. Paste the official Hugo GitHub Action YAML into the file.
+3. Paste the official [Hugo GitHub Action YAML](https://gohugo.io/host-and-deploy/host-on-github-pages/#step-4) into the file.
 4. Navigate to **Settings > Pages** on GitHub.
 5. Change **Build and deployment > Source** to **"GitHub Actions"**.
 
 ---
 
-### **6. Agentic Automation (The "Doom Coding" Workflow)**
+### Bonus: AI!
 
 To minimize manual overhead, use an LLM agent (like Claude Code) to handle metadata and maintenance.
-
-#### **Automate Metadata & Tags**
 
 Instead of manually writing front matter, prompt the agent:
 
 > "Review `content/posts/new-post.md`. Generate a 2-sentence summary for the `description` field and suggest 5 relevant `tags` based on the content. Update the file front matter directly."
 
-#### **Automate the "About" Page**
-
-Keep your bio updated based on your latest projects:
-
-> "Read `README.md` from my Spotify Tracker repo and my last three blog posts. Update `content/about.md` to reflect my current focus on metal music and mobile development."
-
-#### **Pre-Flight Review & Post**
+> "Read `README.md` from [insert favorite project here] repo and my last three blog posts. Update `content/about.md` to reflect my current focus."
 
 Use the agent as a CI gatekeeper before you push:
 
 > "Check all files in `content/posts/`. Ensure `draft` is set to `false` for completed posts, verify all internal links work, and ensure images are correctly referenced in the `/static` folder. If everything is correct, commit with the message 'Release: [Post Title]' and push to main."
 
----
-
-### **7. Essential File Reference**
+Or even better, create a CLAUDE.md file for your blog repo and let it roll:
 
 **CLAUDE.md** (Place in root):
 
@@ -89,4 +80,4 @@ Use the agent as a CI gatekeeper before you push:
 - Run `hugo server` to validate builds before suggesting a push.
 ```
 
-**Would you like the specific YAML code for the `hugo.yaml` deployment file?**
+Happy blogging :)
