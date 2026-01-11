@@ -14,6 +14,7 @@ $ esh-tracker track --artist="Turnstile" --since 2025-10-01
      Released: 2025-11-14
      URL: https://open.spotify.com/...
 ```
+![Esh Tracker README](/images/doom-coding/result-readme.jpg)
 
 Check it out: `pip install esh-tracker` (or check out the gh link in the comments)!
 
@@ -36,6 +37,8 @@ So on Friday morning I created an empty GitHub repo, and after a weekend of vibe
 *   (Optional but highly recommended) Brainstorm your planned app with your favorite non-coding LLM and ask it to create a spec.
 
 *   Spin up Claude on your phone, go to the Code tab, and feed it your spec.
+
+    ![Claude Code Interaction](/images/doom-coding/claude-interaction.jpg)
 
 *   Keep a `CLAUDE.md` file for instructions. Claude reads it before proceeding, so that's a good place to put important stuff about your project, priorities, and environment. Think of it like the "Our Core Values" document you never opened at your previous job!
 
