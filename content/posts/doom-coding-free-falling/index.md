@@ -23,11 +23,7 @@ $ esh-tracker track --artist="Turnstile" --since 2025-10-01
      URL: https://open.spotify.com/...
 ```
 
-And the most surprising thing was that building it was **SO. MUCH. FUN.**
-
-> The async nature is so perfect for meaningless side-projects like these. I actually vibe-coded at the supermarket and while brushing my teeth. Listen, I love to debate the AI bubble doom scenarios as much as the next guy, but please - you have to try it out. You'll REALLY enjoy it. I promise.
-
-I liked it so much I'm writing this blog post at 3am for god's sake.
+And the most surprising thing was that building it was **SO. MUCH. FUN.** The async nature is so perfect for meaningless side-projects like these. I actually vibe-coded at the supermarket and while brushing my teeth. Listen, I love to debate the AI bubble doom scenarios as much as the next guy, but please - you have to try it out. You'll REALLY enjoy it. I promise. I liked it so much I'm writing this blog post at 3am for god's sake.
 
 ---
 
@@ -55,7 +51,7 @@ And now - content!
 *   Doom code!
 *   Iterate!
 
-{{< figure src="claude-interaction.jpg" caption="A typical Claude Code interaction on mobile—reviewing code changes while waiting for the bus." >}}
+{{< figure src="claude-interaction.jpg" caption="A typical Claude Code interaction on mobile—reviewing code changes while waiting for the bus." width="50%" >}}
 
 ## 💡 Doom Coding TIL
 
