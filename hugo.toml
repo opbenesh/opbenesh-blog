@@ -49,3 +49,6 @@ theme = "PaperMod"
     name = "Categories"
     url = "/categories"
     weight = 50
+[params.assets]
+    favicon = "favicon.png"
+    apple_touch_icon = "apple-touch-icon.png"
