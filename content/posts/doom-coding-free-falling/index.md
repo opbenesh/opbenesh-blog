@@ -32,6 +32,8 @@ Turns out that specific setup is so August 2025. These days, the LLM guys allow 
 
 So on Friday morning I created an empty GitHub repo, and after a weekend of vibe-Clauding on the go (is this a thing? this should be a thing), I had a fully working app—complete with an AI-generated logo!
 
+And the most surprising thing was that building it was **SO. MUCH. FUN.** The async nature is so perfect for meaningless side-projects like these. I actually vibe-coded at the supermarket and while brushing my teeth. Listen, I love to debate the AI bubble doom scenarios as much as the next guy, but please - you have to try it out. You'll REALLY enjoy it. I promise. I liked it so much I'm writing this blog post at 3am for god's sake.
+
 ## 🧑‍🎓 HOW TO DOOM CODE
 
 *   Create an empty, private GitHub repo.
