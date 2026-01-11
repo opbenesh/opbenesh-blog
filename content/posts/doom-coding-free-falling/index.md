@@ -51,3 +51,11 @@ And the most surprising thing was that building it was **SO. MUCH. FUN.** The as
 *   TDD FTW. Ask Claude to create tests for EVERY SINGLE POSSIBLE SCENARIO, and remind it to run them every once in a while. This is a great way to help the agent understand whether its task is truly done.
 
 *   One conversation per topic. Start a session, give it a few related tasks, review and merge the PR, and move on. Both you and the agent will concentrate better in this model. Learned anything interesting in this session? Great! Update `CLAUDE.md`.
+
+## Assorted TIL 💡
+
+*   Unsuprisingly, auto-approve completely changes the interaction model with these agents. Instead of closesly supervising every `rm`, the whole thing becomes truly async. Which means that...
+*   Figuring out sandboxes is key to all of this, which is why these new container-first services (Claude Code, Google Jules and OpenAI's Codex) are so great. Let's hope they keep underpricing them!
+*   One suprising side effect of the async manner is that you can either use your newly free time for non-coding tasks (e.g. making dinner), but
+*   You can also use it for performing *other coding tasks* (hello Jevons paradox!). I ended up spending most of my weekend on this.
+*   Also - you _can_ actually use these things for non-coding tasks. Data analysis and research feels like a natural next step - put all your csvs file in a GitHub repo and let it run.
