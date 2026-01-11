@@ -3,7 +3,7 @@ title: "Set Up Your Hugo+GitHub Blog In 5 Minutes"
 date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
-summary: "A guide to setting up a Hugo blog and automating it with AI agents."
+summary: "A guide to setting up a Hugo/GitHub blog and automating it with AI agents."
 ---
 
 I literally done this an hour ago, so might as well document my learning for future generations!
@@ -69,8 +69,6 @@ Use the agent as a CI gatekeeper before you push:
 > "Check all files in `content/posts/`. Ensure `draft` is set to `false` for completed posts, verify all internal links work, and ensure images are correctly referenced in the `/static` folder. If everything is correct, commit with the message 'Release: [Post Title]' and push to main."
 
 Or even better, create a CLAUDE.md file for your blog repo and let it roll:
-
-**CLAUDE.md** (Place in root):
 
 ```markdown
 # Project Rules
