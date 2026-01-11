@@ -3,15 +3,27 @@ languageCode = 'en-us'
 title = 'Ben Esh Presents: TIL in Blog Form'
 theme = "PaperMod"
 
-[[params.socialIcons]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/ben-esh"
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
+[params.homeInfoParams]
+    Title = "Ben Esh Presents: TIL in Blog Form ☢️"
+    Content = "Product Manager by day, nostalgic ex-coder by night. This is a collection of things I learned, built, or broke while doom coding."
 
 [[params.socialIcons]]
-name = "email"
-url = "/contact"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/ben-esh"
+
+[[params.socialIcons]]
+    name = "email"
+    url = "/contact"
 
 [menu]
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search"
+    weight = 5
   [[menu.main]]
     identifier = "home"
     name = "Home"
@@ -27,3 +39,13 @@ url = "/contact"
     name = "Contact"
     url = "/contact"
     weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags"
+    weight = 40
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories"
+    weight = 50
