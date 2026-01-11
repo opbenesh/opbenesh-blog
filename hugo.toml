@@ -2,6 +2,7 @@ baseURL = 'https://opbenesh.github.io/'
 languageCode = 'en-us'
 title = 'Ben Esh'
 theme = "PaperMod"
+copyright = "© 2026 Ben Esh"
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
@@ -54,10 +55,13 @@ theme = "PaperMod"
     apple_touch_icon = "apple-touch-icon.png"
 
 [params]
+    description = "Personal blog covering doom coding, side projects, and technical explorations"
     ShowShareButtons = true
     ShowReadingTime = true
     ShowPostNavLinks = true
     ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowToc = true
     author = "Ben Esh"
 
 [related]
