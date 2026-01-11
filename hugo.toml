@@ -1,13 +1,13 @@
 baseURL = 'https://opbenesh.github.io/'
 languageCode = 'en-us'
-title = 'Ben Esh Presents: TIL in Blog Form'
+title = 'Ben Esh'
 theme = "PaperMod"
 
 [outputs]
     home = ["HTML", "RSS", "JSON"]
 
 [params.homeInfoParams]
-    Title = "Ben Esh Presents: TIL in Blog Form ☢️"
+    Title = "Ben Esh"
     Content = "Product Manager by day, nostalgic ex-coder by night. This is a collection of things I learned, built, or broke while doom coding."
 
 [[params.socialIcons]]
