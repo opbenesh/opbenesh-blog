@@ -4,6 +4,8 @@ draft = false
 title = 'My Unexpected Descent into Doom Coding (or: How I Built a Spotify Tracker App Using My Phone)'
 +++
 
+![Esh Tracker README](result-readme.jpg)
+
 Hosting a weekly "new metal" show at KZRadio (hello, shameless plug) means I have an ever-renewing deadline for finding new stuff to play, and Spotify's own Release Radar misses 70% of the good stuff. Introducing:
 
 ```bash
@@ -14,7 +16,7 @@ $ esh-tracker track --artist="Turnstile" --since 2025-10-01
      Released: 2025-11-14
      URL: https://open.spotify.com/...
 ```
-![Esh Tracker README](result-readme.jpg)
+
 
 Check it out: `pip install esh-tracker` (or check out the gh link in the comments)!
 
