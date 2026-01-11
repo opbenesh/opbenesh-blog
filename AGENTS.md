@@ -24,5 +24,38 @@
 - **Validation**: Run `hugo server` or check for build errors before pushing.
 - **Pre-Push Check**: Ensure `draft` is set to `false` for published posts and all internal links/images are verified.
 
+## Cover Image Design Principles
+
+All blog post cover images should follow this consistent visual style:
+
+### Technical Specifications
+- **Dimensions**: 1200x300px (4:1 aspect ratio banner format)
+- **Background**: Dark (#0a0a0a / nearly black)
+- **Primary Color**: Neon green (#00ff88 / rgb(0, 255, 136))
+- **File Format**: PNG
+- **Location**: Page bundle (`content/posts/[post-name]/cover.png`)
+
+### Design Guidelines
+- **Layout**: Icon(s) on left side (starting ~80px from left edge), bold title text starting ~280px from left
+- **Icons**: Simple geometric shapes representing the post topic (satellite dish for doom-coding, gopher for Hugo, etc.)
+- **Typography**: Large, bold sans-serif font (~100pt), neon green color
+- **Style**: Minimalist, clean, modern aesthetic with strong contrast
+- **Consistency**: All covers should feel like part of the same brand family
+
+### Front Matter Configuration
+```toml
+[cover]
+image = "cover.png"
+alt = "[Descriptive alt text]"
+relative = true
+```
+
+### Creation Tips
+- Use simple geometric primitives (circles, triangles, rectangles) for icons
+- Keep icons outlined (stroke only) rather than filled for consistency
+- Text should be concise (2-4 words max) and clearly readable
+- Maintain ~8-10px stroke width for icon outlines
+- Test visibility on both light and dark backgrounds (though primarily viewed on dark)
+
 #### Discoveries
 - **Images**: Prefer Page Bundles (matching the `index.md` location) or the `assets` folder for blog images to support Hugo's image processing, though the `/static` folder remains the default for raw assets.
