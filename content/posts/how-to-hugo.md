@@ -1,5 +1,5 @@
 ---
-title: "Set Up Your Hugo + GitHub Blog In 5 Minutes"
+title: "Set Your Hugo + GitHub Blog In 5 Minutes"
 date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
@@ -44,7 +44,19 @@ Update `hugo.toml` with your specific details.
 * **baseURL**: `https://[your-github-username].github.io/`
 * **theme**: `PaperMod`
 
-#### **5. Deployment Automation (GitHub Actions)**
+#### **5. Connect to GitHub & Deploy**
+
+1. **Create a new repository** on GitHub (name it `my-blog` or similar). Do not initialize it with a README or License.
+2. **Link and push** your local project:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/[your-username]/my-blog.git
+   git push -u origin main
+   ```
+
+#### **6. Deployment Automation (GitHub Actions)**
 
 1. `mkdir -p .github/workflows`
 2. `touch .github/workflows/hugo.yaml`
