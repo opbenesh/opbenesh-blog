@@ -4,15 +4,16 @@ date: 2026-01-11T03:47:48+02:00
 draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
 summary: "I literally did this an hour ago—here is how to set up a Hugo blog with PaperMod and delegate the maintenance to AI agents."
+author: "Ben Esh"
 cover:
   image: "cover.png"
   alt: "Hugo setup guide banner"
   relative: true
 ---
 
-I literally done this an hour ago, so might as well document my learning for future generations!
+I literally did this an hour ago, so might as well document my learning for future generations!
 
-#### **1. Core Prerequisites**
+## 1. Core prerequisites
 
 Open a terminal, install `hugo` and the GitHub CLI (`gh`):
 ```bash
@@ -24,7 +25,7 @@ brew install hugo gh
 gh auth login
 ```
 
-#### **2. Initialize and Link**
+## 2. Initialize and link
 
 Create the directory structure, initialize Git, and **link it to GitHub**.
 
@@ -38,7 +39,7 @@ git init
 gh repo create [your-username].github.io --public --source=. --remote=origin
 ```
 
-#### **3. Theme Installation**
+## 3. Theme installation
 
 Pick a hugo theme - I use PaperMod:
 
@@ -47,22 +48,22 @@ git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
 echo 'theme = "PaperMod"' >> hugo.toml
 ```
 
-#### **4. Basic Config**
+## 4. Basic config
 
 Update `hugo.toml` with your specific details.
 
-* **baseURL**: `https://[girhub-username].github.io/`
+* **baseURL**: `https://[github-username].github.io/`
 * **theme**: `PaperMod`
 
-#### **5. Create Your First Post**
+## 5. Create your first post
 
 ```bash
 hugo new posts/my-first-post.md
 ```
 
-Open that file and change `draft: true` to **`draft: false`**. Also, rememver to feed it actual content at some point!
+Open that file and change `draft: true` to **`draft: false`**. Also, remember to feed it actual content at some point!
 
-#### **6. Final Push**
+## 6. Final push
 
 Now that everything is configured and you have your first post, push it to GitHub:
 
@@ -73,7 +74,7 @@ git branch -M main
 git push -u origin main
 ```
 
-#### **7. Deployment Automation (GitHub Actions)**
+## 7. Deployment automation (GitHub Actions)
 
 1. `mkdir -p .github/workflows`
 2. `touch .github/workflows/hugo.yaml`
@@ -85,7 +86,7 @@ That's it - you can now interact with your git repo using your favourite local/w
 
 ---
 
-### Bonus: AI!
+## Bonus: AI
 
 To minimize manual overhead, use an LLM agent (like Claude Code) to handle metadata and maintenance.
 
