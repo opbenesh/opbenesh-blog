@@ -5,13 +5,9 @@ draft: false
 tags: ["hugo", "automation", "ai", "tutorial"]
 summary: "I literally did this an hour ago—here is how to set up a Hugo blog with PaperMod and delegate the maintenance to AI agents."
 author: "Ben Esh"
-cover:
-  image: "cover.png"
-  alt: "Hugo setup guide banner"
-  relative: true
 ---
 
-I literally did this an hour ago, so might as well document my learning for future generations!
+I literally did this for myself an hour ago, so might as well document my learning for future generations!
 
 ## 1. Core prerequisites
 
@@ -52,8 +48,8 @@ echo 'theme = "PaperMod"' >> hugo.toml
 
 Update `hugo.toml` with your specific details.
 
-* **baseURL**: `https://[github-username].github.io/`
-* **theme**: `PaperMod`
+*   **baseURL**: `https://[github-username].github.io/`
+*   **theme**: `PaperMod`
 
 ## 5. Create your first post
 
@@ -61,9 +57,15 @@ Update `hugo.toml` with your specific details.
 hugo new posts/my-first-post.md
 ```
 
-Open that file and change `draft: true` to **`draft: false`**. Also, remember to feed it actual content at some point!
+## 6. Local preview
 
-## 6. Final push
+Before pushing, it's always good to see how it looks:
+```bash
+hugo server -D
+```
+Open `http://localhost:1313` to preview your site. The `-D` flag tells Hugo to include drafts.
+
+## 7. Final push
 
 Now that everything is configured and you have your first post, push it to GitHub:
 
@@ -74,13 +76,13 @@ git branch -M main
 git push -u origin main
 ```
 
-## 7. Deployment automation (GitHub Actions)
+## 8. Deployment automation (GitHub Actions)
 
-1. `mkdir -p .github/workflows`
-2. `touch .github/workflows/hugo.yaml`
-3. Paste the official [Hugo GitHub Action YAML](https://gohugo.io/host-and-deploy/host-on-github-pages/#step-4) into the file.
-4. Navigate to **Settings > Pages** on GitHub.
-5. Change **Build and deployment > Source** to **"GitHub Actions"**.
+1.  `mkdir -p .github/workflows`
+2.  `touch .github/workflows/hugo.yaml`
+3.  Paste the official [Hugo GitHub Action YAML](https://gohugo.io/host-and-deploy/host-on-github-pages/#step-4) into the file.
+4.  Navigate to **Settings > Pages** on GitHub.
+5.  Change **Build and deployment > Source** to **"GitHub Actions"**.
 
 That's it - you can now interact with your git repo using your favourite local/web IDE. GitHub will automatically publish a new version whenever you `git push`.
 
@@ -88,19 +90,13 @@ That's it - you can now interact with your git repo using your favourite local/w
 
 ## Bonus: AI
 
-To minimize manual overhead, use an LLM agent (like Claude Code) to handle metadata and maintenance.
-
-Instead of manually writing front matter, prompt the agent:
+Since the whole setup is Markdown-based, you can easily use a coding agent for metadata and maintenance. For example, instead of manually writing front matter, prompt the agent to:
 
 > "Review `content/posts/new-post.md`. Generate a 2-sentence summary for the `description` field and suggest 5 relevant `tags` based on the content. Update the file front matter directly."
 
-> "Read `README.md` from [insert favorite project here] repo and my last three blog posts. Update `content/about.md` to reflect my current focus."
+> "Check all files in `content/posts/`. Ensure `draft` is set to `false` for completed posts, verify all internal links work, and ensure images are correctly referenced in the `/static` folder."
 
-Use the agent as a CI gatekeeper before you push:
-
-> "Check all files in `content/posts/`. Ensure `draft` is set to `false` for completed posts, verify all internal links work, and ensure images are correctly referenced in the `/static` folder. If everything is correct, commit with the message 'Release: [Post Title]' and push to main."
-
-Or even better, create a CLAUDE.md file for your blog repo and let it roll:
+Or even better, create an `AGENTS.md` file for your blog repo and let it roll:
 
 ```markdown
 # Project Rules
@@ -109,7 +105,8 @@ Or even better, create a CLAUDE.md file for your blog repo and let it roll:
 - Summaries should be under 160 characters for SEO.
 - Run `hugo server` to validate builds before suggesting a push.
 ```
-Feel free to check out my vendor-independent [AGENTS.md](https://github.com/opbenesh/opbenesh.github.io/blob/main/AGENTS.md) file!
+
+Feel free to check out mine [here!](https://github.com/opbenesh/opbenesh.github.io/blob/main/AGENTS.md)
 
 Happy blogging :)
 
