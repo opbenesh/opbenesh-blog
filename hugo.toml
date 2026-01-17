@@ -9,7 +9,7 @@ copyright = "© 2026 Ben Esh"
 
 [params.homeInfoParams]
     Title = "Ben Esh"
-    Content = "Product Manager by day, nostalgic ex-coder by night. This is a collection of things I learned, built, or broke while doom coding."
+    Content = "A digital scratchpad for my coding experiments and TILs."
     images = ["/favicon.png"]
 
 [[params.socialIcons]]
