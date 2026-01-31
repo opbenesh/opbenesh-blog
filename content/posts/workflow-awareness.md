@@ -3,7 +3,7 @@ title: "aggressive self-awareness -> productivity!"
 date: 2026-01-28T00:21:39+02:00
 draft: false
 tags: ["productivity", "workflow", "ai", "automation", "shower thoughts"]
-summary: "The real ROI of AI isn't automating what you think you need, but what's actually slowing you down right now."
+summary: "Pre-automation is the root of all evil"
 author: "Ben Esh"
 ShowPostNavLinks: true
 ---
