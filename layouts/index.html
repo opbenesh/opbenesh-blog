@@ -1,0 +1,131 @@
+{{- define "main" }}
+
+{{- if .Content }}
+<div class="post-content">
+    {{ .Content }}
+</div>
+{{- end }}
+
+<div class="continuous-posts">
+    {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{- $pages = where $pages "Params.draft" "!=" true }}
+
+    {{- range $index, $page := $pages }}
+    <article class="post-entry continuous-article">
+        <header class="entry-header">
+            <h2>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+        </header>
+
+        {{- if (and (.Param "ShowReadingTime") (not .Params.hideMeta)) }}
+        <div class="post-meta">
+            {{- if .Date }}
+            <span>{{ .Date.Format "January 2, 2006" }}</span>
+            {{- end }}
+            {{- if .ReadingTime }}
+            <span> · {{ .ReadingTime }} min read</span>
+            {{- end }}
+            {{- if .Params.author }}
+            <span> · {{ .Params.author }}</span>
+            {{- end }}
+        </div>
+        {{- end }}
+
+        {{- if .Params.tags }}
+        <div class="post-tags">
+            {{- range .Params.tags }}
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">#{{ . }}</a>
+            {{- end }}
+        </div>
+        {{- end }}
+
+        <div class="entry-content">
+            {{ .Content }}
+        </div>
+
+        {{- if or (.Param "ShowShareButtons") (.Param "ShowPostNavLinks") }}
+        <footer class="entry-footer">
+            {{- if (.Param "ShowShareButtons") }}
+            {{- partial "share-icons.html" . }}
+            {{- end }}
+        </footer>
+        {{- end }}
+    </article>
+
+    {{- if not (eq (add $index 1) (len $pages)) }}
+    <hr class="post-separator">
+    {{- end }}
+
+    {{- end }}
+</div>
+
+<style>
+.continuous-posts {
+    margin-top: 2rem;
+}
+
+.continuous-article {
+    margin-bottom: 3rem;
+}
+
+.post-separator {
+    margin: 3rem auto;
+    border: none;
+    border-top: 1px solid var(--border);
+    max-width: 200px;
+}
+
+.continuous-article .entry-header h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.continuous-article .entry-header h2 a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.continuous-article .entry-header h2 a:hover {
+    color: var(--secondary);
+}
+
+.continuous-article .post-meta {
+    color: var(--secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.continuous-article .post-tags {
+    margin-bottom: 1.5rem;
+}
+
+.continuous-article .post-tags a {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    background: var(--code-bg);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.continuous-article .post-tags a:hover {
+    background: var(--border);
+}
+
+.continuous-article .entry-content {
+    margin-top: 1.5rem;
+    line-height: 1.6;
+}
+
+.continuous-article .entry-footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+</style>
+
+{{- end }}
