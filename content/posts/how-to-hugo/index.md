@@ -1,11 +1,13 @@
 ---
 title: "setup your Hugo + GitHub blog in 5 minutes"
 date: 2026-01-11T03:47:48+02:00
-draft: false
+draft: true
 tags: ["hugo", "automation", "ai", "tutorial"]
 summary: "I literally did this an hour ago—here is how to set up a Hugo blog with PaperMod and delegate the maintenance to AI agents."
 author: "Ben Esh"
 ---
+
+FUTURE NOTE: replace with a til for coding agent + hugo setup
 
 I literally did this for myself an hour ago, so might as well document my learning for future generations!
 
