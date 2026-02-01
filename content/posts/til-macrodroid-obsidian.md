@@ -30,7 +30,7 @@ Here's how I set it up:
 6. Choose `Prepend to file` so newest links appear at the top
 7. Save the Macro and share a link to MacroDroid (not Obsidian!)
 
-Give it a go - here's how the same list would look now:
+Every time you share a link to MacroDroid the new macro will trigger and add it to the top of your file, which you can then open for reading using Obsidian. Here's how the same list would look now:
 
 > - [ ] [Inside OpenAI's in-house data agent](https://openai.com/index/inside-our-in-house-data-agent/)
 > - [x] [Simon Willison on Technical Blogging - by Cynthia Dunlop](https://writethatblog.substack.com/p/simon-willison-on-technical-blogging)
